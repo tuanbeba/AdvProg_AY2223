@@ -17,7 +17,7 @@ using std::cin;
 int generateRandomNumber(const int min, const int max)
 {
     // TODO: Return a random integer number between min and max
-    int ranDomNumBer = rand()% max + min;
+    int ranDomNumBer = rand()% (max+1-min) + min;
     return ranDomNumBer;
 }
 
@@ -72,6 +72,9 @@ string chooseWordFromList(const vector<string>& wordList, int index)
 {
     // TODO: Return a lowercase word in the index position of the vector wordList.
     string answer= wordList[index];
+    if(answer[i] >= 'A' && answer[i]<='Z' ) {
+        answer[i]+='a'-'A';
+    }
 
     return answer;
 }
