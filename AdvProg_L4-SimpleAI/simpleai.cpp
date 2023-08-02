@@ -63,9 +63,9 @@ map<char, int> countOccurrences(const vector<string>& candidateWords)
     //Write your code here
     for(int i=0;i<candidateWords.size();i++)
     {
-        for(int j=0;j<candidateWords[i].length();i++) {
-            answer[candidateWords[i][j]] ++ ;
-        }
+        for (char j : candidateWords[i]){
+		answer[j]++;
+	}
     }
 
     return answer;
